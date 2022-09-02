@@ -1,0 +1,28 @@
+{% extends 'list.html' %}
+
+{% block columns %}
+     <tr>
+        <th scope="col">Nro</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Medida</th>
+        <th scope="col">Fecha de expiración</th>
+    </tr>
+{% endblock %}
+
+{% block rows %}
+    {% for c in object_list %}
+         <tr>
+            <td>{{ i.id }}</td>
+            <td>{{ i.name }}</td>
+            <td>{{ i.measure }}</td>
+            <td>{{ i.date_expiration }}</td>
+            <td>
+                <button type="button" class="btn btn-warning btn-xs"><i class="fas fa-edit"></i>
+                </button>
+
+                <button type="button" class="btn btn-danger btn-xs"><i class="fas fa-trash"></i>
+                </button>
+            </td>
+        </tr>
+    {% endfor %}
+{% endblock %}
