@@ -37,6 +37,7 @@ class Migration(migrations.Migration):
                 ('name', models.TextField(verbose_name='Nombre_insumo')),
                 ('measure', models.TextField(verbose_name='unidad de medida')),
                 ('date_expiration', models.DateField(verbose_name='fecha de vencimiento')),
+                ('amount', models.IntegerField(verbose_name='cantidad')),
             ],
             options={
                 'verbose_name': 'insumo',

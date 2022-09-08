@@ -105,9 +105,11 @@ class Purchase(models.Model):
         ordering = ['id']
 
 class Insumo(models.Model):
-    name = models.TextField(verbose_name='Nombre_insumo')
+    name = models.TextField(verbose_name='Nombre_insumo', unique=True)
+    amount = models.IntegerField(verbose_name='cantidad')
     measure = models.TextField(verbose_name='unidad de medida')
-    date_expiration = models.DateField(verbose_name='fecha de vencimiento')
+    date_expiration = models.DateField(verbose_name='fecha de vencimiento', null=True)
+
 
     def __str__(self):
         return self.name

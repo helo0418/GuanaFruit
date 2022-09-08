@@ -18,10 +18,14 @@ from django.contrib import admin
 from django.contrib import admin
 from django.urls import path, include
 from django.urls import include
+from core.homepage.views import IndexView
 
 
 
-urlpatterns = [
+
+urlpatterns = {
     path('admin/', admin.site.urls),
-    path('erp/', include('core.erp.urls'))
-]
+    path('erp/', include('core.erp.urls')),
+    path('', IndexView.as_view()),
+
+}

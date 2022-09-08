@@ -1,4 +1,4 @@
-{% extends 'body.html' %}
+{% extends 'hzt/body.html' %}
 {% load static %}
 {% block head %}
     <link rel="stylesheet" href="{% static 'lib/datatables-1.10.20/css/dataTables.bootstrap4.min.css' %}"/>
@@ -33,14 +33,14 @@
             </table>
         </div>
         <div class="card-footer">
-            <button class="btn btn-primary btn-flat btnTest">
+            <a href="{{ create_url }}" class="btn btn-primary btn-flat btnTest">
                 <i class="fas fa-plus"></i> Nuevo registro
-            </button>
+            </a>
         </div>
     </div>
 {% endblock %}
 
-{% block javascript %}
+{#{% block javascript %}#}
 {#    <script type="application/javascript">#}
 {#        $(function () {#}
 {#            $('#data').DataTable({#}
@@ -64,4 +64,4 @@
 {#            });#}
 {#        });#}
 {#    </script>#}
-{% endblock %}
+{#{% endblock %}#}
